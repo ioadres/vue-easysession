@@ -1,0 +1,23 @@
+{
+    "name": "vue-sessions",
+    "version": "0.0.1",
+    "description": "A simplistic session storage plugin for VueJS",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/victorsferreira/vue-session"
+    },
+    "keywords": [
+      "vue",
+      "vuejs",
+      "session",
+      "plugin",
+      "vue-plugin",
+      "storage"
+    ],
+    "author": "Andrés García <andres.garcia.dev@outlook.com>",
+    "license": "ISC"
+  }
