@@ -13,7 +13,7 @@ ManageSession.getVueSession = function(options) {
 }
 
 ManageSession.getInstance = function(options) {
-    return new SessionStorage(options);
+    return new SessionStorage.default(options);
 }
 
 module.exports = ManageSession;
