@@ -1,18 +1,18 @@
-import SessionStorage from './session-storage';
+var SessionStorage  =  require ( './session-storage');
 
 var ManageSession = {}
 
 
-ManageSession.GetVueSession = function(options) {
+ManageSession.getVueSession = function(options) {
     var VueSession = {};
     VueSession.install = function(Vue, options) {
-        Vue.prototype.$session = new SessionStorage(options);
+        Vue.prototype.$session = new SessionStorage.default(options);
     }
 
     return VueSession;
 }
 
-ManageSession.GetInstance = function(options) {
+ManageSession.getInstance = function(options) {
     return new SessionStorage(options);
 }
 
