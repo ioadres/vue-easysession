@@ -16,4 +16,7 @@ ManageSession.GetInstance = function(options) {
     return new SessionStorage(options);
 }
 
-module.exports = ManageSession;
+if(typeof window !== 'undefined' && window.Vue){
+    window.ManageSession = ManageSession;
+    window.Vue.use(ManageSession.GetVueSession());
+}

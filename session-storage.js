@@ -28,11 +28,12 @@ function getStorage(options) {
 const defaultKeySession = 'vue-session-key';
 
 class SessionStorage {
-    constructor(options) {        
-        if(options.keySession === undefined) {
-            options.keySession = defaultKeySession;
+    constructor(options) {      
+        var key = defaultKeySession;
+        if(options && options.keySession === undefined) {
+            key = options.keySession
         }        
-        this.mainKeySession = options.keySession;
+        this.mainKeySession = key;
         this.storage = getStorage(options);
     }
 
