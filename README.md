@@ -1,3 +1,9 @@
+### Install
+
+```bash
+npm install vue-sessions --save
+```
+
 To install the plugin, do the following:
 
 ```javascript
@@ -13,7 +19,7 @@ VueSession can be started with some options that will change its behavior.
 
 - `persist` A Boolean value to determine whether the data stored in the session may persist between tabs and browser instances. Defaults to `false`.
 
-- `keySession` A String value to determine the key of the current vue session. Defaults is `vue-session-key``
+- `keySession` A String value to determine the key of the current Vue session. Defaults is `vue-session-key``
 
 Pass the options in the `use` method:
 
@@ -42,7 +48,7 @@ Vue.use(VueSession, options)
 
 ## Reference the instance ManageSession
 
-You can use the session in other scripts file
+You can use the session in others scripts file
 
 ```javascript
 import ManageSession from 'vue-sessions'
