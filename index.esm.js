@@ -17,8 +17,8 @@ VueEasySession.GetInstance = function(options) {
 }
 
 if(typeof window !== 'undefined' && window.Vue){
-    window.ManageSession = ManageSession;
-    window.Vue.use(ManageSession.GetVueSession());
+    window.VueEasySession = VueEasySession;
+    window.Vue.use(VueEasySession.GetVueSession());
 }
 
 export default VueEasySession;
