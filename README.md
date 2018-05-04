@@ -17,16 +17,21 @@ Now you can use it in your components with the `$session` property.
 
 VueSession can be started with some options that will change its behavior.
 
-- `persist` A Boolean value to determine whether the data stored in the session may persist between tabs and browser instances. Defaults to `false`.
+- `persist` A Boolean value to determine whether the data stored in the session may persist between tabs and browser instances. Defaults to `false`. Optional
 
-- `keySession` A String value to determine the key of the current Vue session. Defaults is `vue-session-key``
+- `keySession` A String value to determine the key of the current Vue session. Defaults is `vue-session-key`. Optional
+
+- `expireSessionCallback` is event handler that is execute when the expiration is success. Default is undefined. Optional
 
 Pass the options in the `use` method:
 
 ```javascript
 var options = {
     persist: true,
-    keySession: 'myKeySession'
+    keySession: 'myKeySession',
+    expireSessionCallback: function () {
+        window.location.href = '/'
+    }
 }
 
 Vue.use(VueEasySession.install, options)
@@ -37,7 +42,9 @@ Vue.use(VueEasySession.install, options)
 - `this.$session.getAll()`, returns all data stored in the Session.
 - `this.$session.set(key,value)`, sets a single value to the Session.
 - `this.$session.get(key)`, returns the value attributed to the given key.
-- `this.$session.start()`, initializes a session with a 'session-id'. If you attempt to save a value without having started a new session, the plugin will automatically start a new session.
+
+- `this.$session.start(exp : milliseconds)`, initializes a session with a 'session-id'. If you attempt to save a value without having started a new session, the plugin will automatically start a new session. the parameter exp is optional and indicate the time of expiration the session(millisecond)
+
 - `this.$session.exists()`, checks whether a session has been initialized or not.
 - `this.$session.has(key)`, checks whether the key exists in the Session
 - `this.$session.remove(key)`, removes the given key from the Session
