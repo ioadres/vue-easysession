@@ -10,6 +10,10 @@ function SessionStorage(options) {
   if (options && options.keySession !== undefined) {
     key = options.keySession
   }
+  if (options && options.expireSessionCallback !== undefined) {
+    this.expireSessionCallback = options.expireSessionCallback
+  }
+
   this.mainKeySession = key;
   this.storage = this.getStorage(options);
 }
@@ -41,11 +45,44 @@ SessionStorage.prototype.get = function (key) {
   return all[key];
 }
 
-SessionStorage.prototype.start = function () {
+SessionStorage.prototype.start = function (exp) {
   var all = this.getAll();
-  all['session-id'] = 'sess:' + Date.now();
+  var time = new Date();
+
+  all['session-id'] = 'sess:' + time.toJSON();
+
+  if (exp !== undefined) {
+    var expiration = new Date();
+    expiration.setMilliseconds(expiration.getMilliseconds() + exp);
+    all['session-control'] = {
+      expiration: expiration.toJSON(),
+      exp: exp,
+      time: time
+    }
+
+    setTimeout(this.expireSession.bind(this), exp);
+  }
 
   this.setAll(all);
+}
+
+SessionStorage.prototype.expireSession = function () {
+  this.destroy()
+  this.expireSessionCallback()
+}
+
+SessionStorage.prototype.runExpire = function () {
+  var all = this.getAll();
+  var sessionControl = all['session-control']
+  if (sessionControl && sessionControl.expiration !== undefined && sessionControl.exp !== undefined) {
+    var time = new Date();
+    if (sessionControl.expiration <= time) {
+      this.destroy()
+      window.location.href = ''
+    } else {
+      setTimeout(this.expireSession.bind(this), new Date(sessionControl.expiration) - new Date(sessionControl.time))
+    }
+  }
 }
 
 SessionStorage.prototype.renew = function (sessionId) {
