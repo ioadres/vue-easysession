@@ -46,7 +46,7 @@ Vue.use(VueEasySession.install, options)
 - `this.$session.id()`, returns the 'session-id'
 - `this.$session.renew(session_id)`, allows a user to renew a previous session by manually inputting the session_id
 
-## Reference the instance ManageSession
+## Reference the instance VueEasySession
 
 You can use the session in others scripts file
 
@@ -57,7 +57,7 @@ if(session.exists()) {
   console.log(true);
 }
 ```
-you can add the options parameters too in the `ManageSession.getInstance(options)`
+you can add the options parameters too in the `VueEasySession.getInstance(options)`
 
 
 ## Example
