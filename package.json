@@ -1,25 +1,25 @@
 {
-    "name": "vue-easysession",
-    "version": "0.0.1",
-    "description": "A manage easy session storage plugin for VueJS",
-    "main": "index.js",
-    "unpkg": "index.unpkg.js",
-    "esm": "index.esm.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/ioadres/vue-sessions"
-    },
-    "keywords": [
-      "vue",
-      "vuejs",
-      "session",
-      "plugin",
-      "vue-plugin",
-      "storage"
-    ],
-    "author": "Andrés García <andres.garcia.dev@outlook.com>",
-    "license": "ISC"
-  }
+  "name": "vue-easysession",
+  "version": "0.0.2",
+  "description": "A manage easy session storage plugin for VueJS",
+  "main": "index.js",
+  "unpkg": "index.unpkg.js",
+  "esm": "index.esm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ioadres/vue-easysession.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "session",
+    "plugin",
+    "vue-plugin",
+    "storage"
+  ],
+  "author": "Andrés García <andres.garcia.dev@outlook.com>",
+  "license": "ISC"
+}

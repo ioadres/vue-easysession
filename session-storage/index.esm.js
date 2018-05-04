@@ -30,7 +30,7 @@ const defaultKeySession = 'vue-session-key';
 class SessionStorage {
   constructor(options) {
     var key = defaultKeySession;
-    if (options && options.keySession === undefined) {
+    if (options && options.keySession !== undefined) {
       key = options.keySession
     }
     this.mainKeySession = key;

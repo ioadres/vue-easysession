@@ -2,7 +2,7 @@ var SessionStorage = require('./session-storage');
 
 var VueEasySession = {}
 
-VueEasySession.getVueSession = function (options) {
+VueEasySession.getVueSession = function () {
     var VueSession = {};
     VueSession.install = function (Vue, options) {
         Vue.prototype.$session = new SessionStorage.default(options);
