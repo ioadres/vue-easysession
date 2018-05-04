@@ -80,7 +80,7 @@ SessionStorage.prototype.runExpire = function () {
       this.destroy()
       window.location.href = ''
     } else {
-      setTimeout(this.expireSession.bind(this), new Date(sessionControl.expiration) - new Date(sessionControl.time))
+      setTimeout(this.expireSession.bind(this), new Date(sessionControl.expiration) - time)
     }
   }
 }
