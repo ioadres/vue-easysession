@@ -1,14 +1,14 @@
 ### Install
 
 ```bash
-npm install vue-sessions --save
+npm install vue-easysession --save
 ```
 
 To install the plugin, do the following:
 
 ```javascript
-import ManageSession from 'vue-sessions'
-Vue.use(ManageSession.getVueSession().install)
+import VueEasySession from 'vue-easysession'
+Vue.use(VueEasySession.getVueSession().install)
 ```
 
 Now you can use it in your components with the `$session` property.
@@ -29,7 +29,7 @@ var options = {
     keySession: 'myKeySession'
 }
 
-Vue.use(VueSession, options)
+Vue.use(VueEasySession.getVueSession().install, options)
 ```
 
 ## Reference Vue instance this.$session .vue
@@ -51,8 +51,8 @@ Vue.use(VueSession, options)
 You can use the session in others scripts file
 
 ```javascript
-import ManageSession from 'vue-sessions'
-var session = ManageSession.getInstance()
+import VueEasySession from 'vue-easysession'
+var session = VueEasySession.getInstance()
 if(session.exists()) {
   console.log(true);
 }
