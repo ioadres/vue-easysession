@@ -8,7 +8,7 @@ To install the plugin, do the following:
 
 ```javascript
 import VueEasySession from 'vue-easysession'
-Vue.use(VueEasySession.getVueSession().install)
+Vue.use(VueEasySession.install)
 ```
 
 Now you can use it in your components with the `$session` property.
@@ -29,7 +29,7 @@ var options = {
     keySession: 'myKeySession'
 }
 
-Vue.use(VueEasySession.getVueSession().install, options)
+Vue.use(VueEasySession.install, options)
 ```
 
 ## Reference Vue instance this.$session .vue
