@@ -1,6 +1,6 @@
 {
   "name": "vue-easysession",
-  "version": "0.0.1",
+  "version": "0.0.12",
   "description": "A manage easy session storage plugin for VueJS",
   "main": "index.js",
   "scripts": {
