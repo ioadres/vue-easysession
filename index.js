@@ -9,7 +9,6 @@ const VueEasySession = {
     getInstance: function (options) {
         return sessionStorage.create(options);
     }
-
 }
 
 module.exports = VueEasySession;
