@@ -1,6 +1,6 @@
 {
   "name": "vue-easysession",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A manage easy session storage plugin for VueJS",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioadres/vue-easysession.git"
+    "url": "git+https://github.com/ioadres/vue-easysession.git"
   },
   "keywords": [
     "vue",
@@ -19,5 +19,9 @@
     "storage"
   ],
   "author": "Andrés García <andres.garcia.dev@outlook.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioadres/vue-easysession/issues"
+  },
+  "homepage": "https://github.com/ioadres/vue-easysession#readme"
 }
